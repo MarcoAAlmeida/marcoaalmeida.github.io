@@ -14,6 +14,7 @@ const colorMode = computed({
 
 
 <template>
+  <p>testing deploy</p>
   <ClientOnly>
     <el-switch v-model="colorMode" inline-prompt active-text="dark" inactive-text="light" size="large"></el-switch>
   </ClientOnly>
