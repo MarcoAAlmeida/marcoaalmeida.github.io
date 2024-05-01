@@ -31,6 +31,7 @@
     "@vueuse/nuxt": "^10.7.0",
     "consola": "^3.2.3",
     "nuxt": "^3.8.2",
+    "nuxt-icon": "^0.6.10",
     "sass": "^1.69.5",
     "typescript": "^5.3.3"
   },
