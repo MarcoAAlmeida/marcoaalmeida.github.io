@@ -16,8 +16,8 @@ function mapTypeToStyle(type: string): string {
     <div v-for="item in stackItems" :key="item.name" class="m-1">
       <el-tooltip class="box-item" effect="dark" placement="bottom-start">
         <template #content>
-          {{ `${item.name} : ${item.tooltip}` }}
-          <nuxt-link class="no-underline text-black" :to="item.link" target="_blank"> check it out</nuxt-link>
+          <p>{{ `${item.name} : ${item.tooltip}` }}</p>
+          <p><nuxt-link class="text-gray-500" :to="item.link" target="_blank"> check it out</nuxt-link></p>
         </template>
         <Icon :name="item.icon_name" size="1em" />
       </el-tooltip>
