@@ -14,7 +14,7 @@ function mapTypeToStyle(type:string) :string{
 </script>
 
 <template>
-  <div class="flex justify-center">
+  <div class="flex flex-wrap justify-center">
     <div v-for="item in stackItems" :key="item.name" class="m-1">
       <el-card class="text-center w-full max-w-28 max-h-64">
           <el-tooltip class="box-item" effect="dark" placement="bottom-start">

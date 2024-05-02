@@ -4,9 +4,9 @@ import { storeToRefs } from 'pinia'
 const store = useStackStore()
 const { stackItems } = storeToRefs(store)
 
-function mapTypeToStyle(type:string) :string{
-  return type === 'framework' ? 'success' : 
-  type === 'library' ? 'info' : type === 'plugin' ? 'warning' :'primary'
+function mapTypeToStyle(type: string): string {
+  return type === 'framework' ? 'success' :
+    type === 'library' ? 'info' : type === 'plugin' ? 'warning' : 'primary'
 }
 
 </script>
@@ -17,15 +17,12 @@ function mapTypeToStyle(type:string) :string{
       <el-tooltip class="box-item" effect="dark" placement="bottom-start">
         <template #content>
           {{ `${item.name} : ${item.tooltip}` }}
+          <nuxt-link class="no-underline text-black" :to="item.link" target="_blank"> check it out</nuxt-link>
         </template>
-        <nuxt-link class="no-underline text-black" :to="item.link"
-          target="_blank">
-          <Icon :name="item.icon_name" size="1em" />
-        </nuxt-link>
+        <Icon :name="item.icon_name" size="1em" />
       </el-tooltip>
     </div>
-  </div> 
+  </div>
 </template>
 
-<style>
-</style>
+<style></style>
