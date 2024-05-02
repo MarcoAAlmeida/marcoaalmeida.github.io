@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { ElNotification as notify } from 'element-plus'
+import StackRibbon from './components/StackRibbon.vue';
 
 const onBack = () => {
   notify('Back')
@@ -11,4 +12,7 @@ const onBack = () => {
     <p>marcoalmeida.github.io</p>
   </nav>
   <NuxtPage />
+  <StackRibbon class="mt-18"/>
+
+
 </template>
