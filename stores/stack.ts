@@ -51,7 +51,16 @@ export const useStackStore = defineStore("user", () => {
       icon_name:'logos:tailwindcss-icon',
       tooltip:'utility-first CSS library - a no-brainer (for good or worse)',
       type:'framework'
+    },
+    {
+      name:'GithubActions',
+      link:'https://github.com/MarcoAAlmeida/marcoaalmeida.github.io/actions/workflows/deploy.yml',
+      icon_name:'devicon-plain:githubactions',
+      tooltip:'github based workflows - a layman\'s CI/CD platform',
+      type:'platform'
     }
+
+    
 
   ]);
 

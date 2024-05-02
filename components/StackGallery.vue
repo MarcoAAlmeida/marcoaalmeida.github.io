@@ -6,7 +6,9 @@ const { stackItems } = storeToRefs(store)
 
 function mapTypeToStyle(type:string) :string{
   return type === 'framework' ? 'success' : 
-  type === 'library' ? 'info' : type === 'plugin' ? 'warning' :'primary'
+  type === 'library' ? 'info' :
+  type === 'plugin' ? 'warning' :
+  type === 'platform' ? 'danger' :'primary'
 }
 
 </script>
@@ -14,7 +16,7 @@ function mapTypeToStyle(type:string) :string{
 <template>
   <div class="flex justify-center">
     <div v-for="item in stackItems" :key="item.name" class="m-1">
-      <el-card class="text-center w-full max-w-28 max-h-80">
+      <el-card class="text-center w-full max-w-28 max-h-64">
           <el-tooltip class="box-item" effect="dark" placement="bottom-start">
             <template #content>
               {{ item.tooltip }}
