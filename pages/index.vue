@@ -1,31 +1,20 @@
 <script setup>
-import StackGallery from '~/components/StackGallery.vue';
-import TechTree from '~/components/TechTree.vue';
-
-const color = useColorMode();
-const colorMode = computed({
-  get: () => color.value === 'dark',
-  set: () => (color.preference = (color.value === 'dark' ? 'light' : 'dark')),
-});
+const { setActiveTopMenu } = useNavStore()
+onMounted(() => {
+  setActiveTopMenu('1')
+})
 </script>
 
 <template>
 
-  <div class="page-index">
+  <div class="mt-20 text-center">
     <ClientOnly>
       <TechTree />
-      <el-switch v-model="colorMode" inline-prompt active-text="dark" inactive-text="light" size="large"></el-switch>
     </ClientOnly>
-    <StackGallery />
     <Icon name="openmoji:construction" size="10em" />
     <p>under construction, sorry for the inconvenience</p>
   </div>
 
 </template>
 
-<style>
-.page-index {
-  padding-top: 60px;
-  text-align: center;
-}
-</style>
+<style></style>

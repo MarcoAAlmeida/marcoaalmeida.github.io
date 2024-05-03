@@ -3,10 +3,14 @@ body,
 #app {
   margin: 0;
   padding: 0;
-}
-
-
-a {
+  font-family: 'Quicksand', sans-serif;
   font-weight: 400;
-  color: var(--el-color-primary);
+  font-style: normal;
 }
+
+h2 a{
+  color: #000000;
+  text-decoration: none;
+}
+
+

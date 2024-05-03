@@ -29,6 +29,15 @@ export const useStackStore = defineStore("stack", () => {
       type:'framework'
     },
     {
+      name:'Content',
+      link:'https://content.nuxt.com/get-started/configuration',
+      icon_name:'skill-icons:nuxtjs-dark',
+      tooltip:'mardown-based content for developers - based on Nuxt',
+      type:'framework'
+    },
+    
+
+    {
       name:'Pinia',
       link:'https://pinia.vuejs.org/introduction.html',
       icon_name:'logos:pinia',
