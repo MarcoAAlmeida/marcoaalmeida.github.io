@@ -3,9 +3,14 @@
     'page': #0a0a0a,
     'overlay': #1d1e1f,
   )
+
 );
 
 :root {
-  --el-color-primary: rgb(8, 8, 197);
-  --el-font-family: "Jaro", sans-serif;
+  --el-color-primary: rgb(1, 1, 137);
+}
+
+:root.dark {
+  --el-color-primary: rgb(7, 117, 251);
+  --el-fill-color-blank:#1d1e1e;
 }

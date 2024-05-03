@@ -33,7 +33,7 @@ export const useStackStore = defineStore("stack", () => {
       link:'https://content.nuxt.com/get-started/configuration',
       icon_name:'skill-icons:nuxtjs-dark',
       tooltip:'mardown-based content for developers - based on Nuxt',
-      type:'framework'
+      type:'plugin'
     },
     
 
