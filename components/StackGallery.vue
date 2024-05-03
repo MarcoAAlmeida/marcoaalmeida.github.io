@@ -4,11 +4,11 @@ import { storeToRefs } from 'pinia'
 const store = useStackStore()
 const { stackItems } = storeToRefs(store)
 
-function mapTypeToStyle(type:string) :string{
+function mapTypeToStyle(type:string) : any{
   return type === 'framework' ? 'success' : 
   type === 'library' ? 'info' :
   type === 'plugin' ? 'warning' :
-  type === 'platform' ? 'danger' :'primary'
+  type === 'platform' ? 'danger' :''
 }
 
 </script>
@@ -16,7 +16,7 @@ function mapTypeToStyle(type:string) :string{
 <template>
   <div class="flex flex-wrap justify-center">
     <div v-for="item in stackItems" :key="item.name" class="m-1">
-      <el-card class="text-center w-full max-w-28 max-h-64">
+      <el-card class="text-center w-28 h-40">
           <el-tooltip class="box-item" effect="dark" placement="bottom-start">
             <template #content>
               {{ item.tooltip }}

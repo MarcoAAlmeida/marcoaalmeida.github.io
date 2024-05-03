@@ -1,6 +1,8 @@
 import { acceptHMRUpdate, defineStore } from "pinia";
 
-export const useStackStore = defineStore("user", () => {
+import lesMiserables from './static/les-miserables.json'
+
+export const useStackStore = defineStore("stack", () => {
   type StackItem = {
     name: string,
     link: string,
@@ -8,6 +10,8 @@ export const useStackStore = defineStore("user", () => {
     tooltip: string,
     type: string
   }
+
+  const graph = ref(lesMiserables)
 
   const stackItems : Ref<StackItem[]> = ref([
     {
@@ -41,7 +45,7 @@ export const useStackStore = defineStore("user", () => {
     {
       name:'Iconify',
       link:'https://icon-sets.iconify.design/',
-      icon_name:'simple-icons:iconify',
+      icon_name:'line-md:iconify1',
       tooltip:'huge icon library - because good icons show you care',
       type:'resource'
     },
@@ -53,18 +57,27 @@ export const useStackStore = defineStore("user", () => {
       type:'framework'
     },
     {
-      name:'GithubActions',
+      name:'ghActions',
       link:'https://github.com/MarcoAAlmeida/marcoaalmeida.github.io/actions/workflows/deploy.yml',
-      icon_name:'devicon-plain:githubactions',
+      icon_name:'devicon:githubactions',
       tooltip:'github based workflows - a layman\'s CI/CD platform',
       type:'platform'
+    },
+    {
+      name:'eCharts',
+      link:'https://echarts.apache.org/examples/en/index.html',
+      icon_name:'simple-icons:apacheecharts',
+      tooltip:'Apache echarts - nice and simple, gets the job done',
+      type:'library'
     }
+
 
     
 
   ]);
 
   return {
+    graph,
     stackItems,
   };
 });

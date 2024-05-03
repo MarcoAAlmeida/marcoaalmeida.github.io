@@ -68,4 +68,7 @@ export default defineNuxtConfig({
     importStyle: 'scss',
     themes: ['dark'],
   },
+  build: {
+    transpile: ['echarts', 'rxjs']
+  }
 })

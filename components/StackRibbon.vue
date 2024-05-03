@@ -12,7 +12,7 @@ function mapTypeToStyle(type: string): string {
 </script>
 
 <template>
-  <div class="flex justify-center">
+  <div class="flex justify-center m-4">
     <div v-for="item in stackItems" :key="item.name" class="m-1">
       <el-tooltip class="box-item" effect="dark" placement="bottom-start">
         <template #content>
