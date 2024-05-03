@@ -91,4 +91,5 @@ export default defineNuxtConfig({
     global: true,
     dirs: ["~/components"],
   },
+  extends: '@nuxt-themes/typography'
 });

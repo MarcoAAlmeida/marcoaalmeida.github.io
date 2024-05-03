@@ -15,12 +15,6 @@ const {activeTopMenu} = storeToRefs(navStore)
                 marcoaalmeida.github.io
                 </nuxt-link>
             </el-menu-item>
-            <div class="flex-grow" />
-                <el-menu-item index="1">
-                    <nuxt-link to="/">
-                    Home
-                    </nuxt-link>
-                </el-menu-item>
             <el-sub-menu index="2">
                 <template #title>Docs</template>
                 <nuxt-link to="docs">
@@ -29,6 +23,12 @@ const {activeTopMenu} = storeToRefs(navStore)
                     </el-menu-item>
                 </nuxt-link>
             </el-sub-menu>
+            <div class="flex-grow" />
+            <div class="p-4">
+                <nuxt-link to="https://github.com/MarcoAAlmeida" target="_blank">
+                    <Icon name="mdi:github" size="1.2em"/>
+                </nuxt-link>
+            </div>
         </el-menu>
     </nav>
 </template>
