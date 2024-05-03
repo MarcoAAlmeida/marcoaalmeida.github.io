@@ -12,13 +12,13 @@ const colorMode = computed({
 <template>
 
   <div class="page-index">
-    <TechTree />
+    <ClientOnly>
+      <TechTree />
+      <el-switch v-model="colorMode" inline-prompt active-text="dark" inactive-text="light" size="large"></el-switch>
+    </ClientOnly>
     <StackGallery />
     <Icon name="openmoji:construction" size="10em" />
     <p>under construction, sorry for the inconvenience</p>
-    <ClientOnly>
-      <el-switch v-model="colorMode" inline-prompt active-text="dark" inactive-text="light" size="large"></el-switch>
-    </ClientOnly>
   </div>
 
 </template>
