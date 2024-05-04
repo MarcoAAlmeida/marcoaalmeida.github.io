@@ -26,7 +26,7 @@ const {activeTopMenu} = storeToRefs(navStore)
             <div class="flex-grow" />
             <div class="p-4">
                 <nuxt-link to="https://github.com/MarcoAAlmeida" target="_blank">
-                    <Icon name="mdi:github" size="1.2em"/>
+                    <Icon name="mdi:github" class="dark:text-white" size="1.2em"/>
                 </nuxt-link>
             </div>
         </el-menu>

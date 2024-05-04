@@ -24,12 +24,14 @@ use([
     LegendComponent,
 ]);
 
-provide(THEME_KEY, 'light');
+const color = useColorMode()
+
+
 
 function buildOption() {
-    return  {
+    return {
         title: {
-            text: 'Les Miserables',
+            text: 'TechTree',
             subtext: 'Default layout',
             top: 'bottom',
             left: 'right'
@@ -47,39 +49,47 @@ function buildOption() {
         animationEasingUpdate: 'quinticInOut',
         series: [
             {
-                name: 'Les Miserables',
+                name: 'TechTree',
                 type: 'graph',
                 legendHoverLink: false,
-                layout: 'none',
+                layout: 'force',
                 data: graph.value.nodes,
                 links: graph.value.links,
                 categories: graph.value.categories,
                 roam: true,
+                force: {
+                    edgeLength: 150,
+                    repulsion: 20,
+                    gravity: 0.2
+                },
                 label: {
                     position: 'right',
                     formatter: '{b}'
                 },
                 lineStyle: {
                     color: 'source',
-                    curveness: 0.3
+                    curveness: 0.2
                 },
                 emphasis: {
                     focus: 'adjacency',
                     lineStyle: {
-                        width: 10
+                        width: 5
                     }
-                }
+                },
+                draggable: true,
+
             }
         ]
     }
 }
 
 const option = ref(buildOption())
+
 </script>
 
 
 <template>
-    <v-chart class="chart" :option="option" autoresize />
+    <v-chart class="chart" :option="option" :theme="color.value" autoresize />
 </template>
 
 

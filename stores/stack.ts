@@ -1,6 +1,7 @@
 import { acceptHMRUpdate, defineStore } from "pinia";
 
 import lesMiserables from './static/les-miserables.json'
+import stackGraph from './static/stackGraph.json'
 
 export const useStackStore = defineStore("stack", () => {
   type StackItem = {
@@ -11,7 +12,7 @@ export const useStackStore = defineStore("stack", () => {
     type: string
   }
 
-  const graph = ref(lesMiserables)
+  const graph = ref(stackGraph)
 
   const stackItems : Ref<StackItem[]> = ref([
     {

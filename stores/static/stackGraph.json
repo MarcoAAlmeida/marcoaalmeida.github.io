@@ -1,0 +1,59 @@
+{
+  "nodes": [
+    {
+      "id": "0",
+      "name": "TypeScript",
+      "symbol": "image://http://localhost:3001/devicon--typescript.png",
+      "symbolSize": "30",
+      "value": "an attempt to fix Javascript",
+      "category": 0
+    },
+    {
+      "id": "1",
+      "name": "Javascript",
+      "symbol": "image://http://localhost:3001/devicon--javascript.png",
+      "symbolSize": "30",
+      "value": "one of the most popular language",
+      "category": 0
+    },
+    {
+      "id": "2",
+      "name": "languages",
+      "symbol": "path://M216 40H40a16 16 0 0 0-16 16v144a16 16 0 0 0 16 16h176a16 16 0 0 0 16-16V56a16 16 0 0 0-16-16M92.8 145.6a8 8 0 1 1-9.6 12.8l-32-24a8 8 0 0 1 0-12.8l32-24a8 8 0 0 1 9.6 12.8L69.33 128Zm58.89-71.4l-32 112a8 8 0 1 1-15.38-4.4l32-112a8 8 0 0 1 15.38 4.4m53.11 60.2l-32 24a8 8 0 0 1-9.6-12.8l23.47-17.6l-23.47-17.6a8 8 0 1 1 9.6-12.8l32 24a8 8 0 0 1 0 12.8",
+      "symbolSize": "30",
+      "value": "used to code",
+      "category": 0
+    }
+  ],
+  "links": [
+    {
+      "source": "0",
+      "target": "1",
+      "label": {
+        "show": true,
+        "formatter": "superset of"
+      }
+    },
+    {
+      "source": "0",
+      "target": "2",
+      "label": {
+        "show": true,
+        "formatter": "is a"
+      }
+    },
+    {
+      "source": "1",
+      "target": "2",
+      "label": {
+        "show": true,
+        "formatter": "is a"
+      }
+    }
+  ],
+  "categories": [
+    {
+      "name": "Languages"
+    }
+  ]
+}
