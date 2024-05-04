@@ -73,8 +73,8 @@ function buildOption() {
                     gravity: 0.2
                 },
                 label: {
-                    position: 'right',
-                    formatter: '{b}'
+                    position: 'top',
+                    formatter: '{b} - {c}'
                 },
                 lineStyle: {
                     color: 'source',
@@ -87,6 +87,9 @@ function buildOption() {
                     }
                 },
                 draggable: true,
+                tooltip:{
+                    show: false
+                }
 
             }
         ]
