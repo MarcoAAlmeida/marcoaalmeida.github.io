@@ -22,7 +22,6 @@ const config = useRuntimeConfig()
     </ClientOnly>
     <Icon name="openmoji:construction" size="10em" />
     <p>under construction, sorry for the inconvenience</p>
-    {{ config.public.content.wsUrl }}
   </div>
 
 </template>

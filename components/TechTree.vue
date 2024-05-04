@@ -52,10 +52,18 @@ function buildOption() {
                 name: 'TechTree',
                 type: 'graph',
                 legendHoverLink: false,
+                label: {
+                    position: 'right',
+                    formatter: '{b}'
+                },
                 layout: 'force',
                 data: graph.value.nodes.map(
-                    item => { return {...item,
-                         symbol: item.symbol.replace("{{baseURL}}", config.public.content.wsUrl.indexOf("localhost") !== -1 ? "http://localhost:3001" : "https://marcoaalmeida.github.io/")  }}),
+                    item => {
+                        return {
+                            ...item,
+                            symbol: item.symbol.replace("{{baseURL}}", config.public.content.wsUrl.indexOf("localhost") !== -1 ? "http://localhost:3001" : "https://marcoaalmeida.github.io/")
+                        }
+                    }),
                 links: graph.value.links,
                 categories: graph.value.categories,
                 roam: true,
