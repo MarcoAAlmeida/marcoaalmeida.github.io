@@ -12,7 +12,7 @@ import { ref, provide } from 'vue';
 
 
 var contrastColor = '#B9B8CE';
-var backgroundColor = '#121212';
+var backgroundColor = '#303030';
 var axisCommon = function () {
     return {
         axisLine: {
@@ -255,7 +255,7 @@ function buildOption() {
                 force: {
                     edgeLength: 200,
                     repulsion: 300,
-                    gravity: 0.015,
+                    gravity: 0.02,
                     friction: 0.02
                 },
                 label: {
@@ -294,6 +294,6 @@ const option = ref(buildOption())
 
 <style scoped>
 .chart {
-    height: 80vh;
+    height: 70vh;
 }
 </style>../theme/pitch_dark.js

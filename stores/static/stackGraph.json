@@ -3,7 +3,7 @@
     {
       "id": "Typescript",
       "name": "Typescript",
-      "symbol": "image://{{baseURL}}/devicon--Typescript.png",
+      "symbol": "image://{{baseURL}}/devicon--typescript.png",
       "symbolSize": "30",
       "value": "an attempt to fix Javascript",
       "category": 0

@@ -15,10 +15,10 @@ const config = useRuntimeConfig()
 
 <template>
 
-  <div class="mt-20 text-center">
+  <div class="mt-15 text-center">
     <ClientOnly>
       <TechTree />
-      <!--el-switch v-model="colorMode" inline-prompt active-text="dark" inactive-text="light" size="large"></!--el-switch-->
+      <el-switch v-model="colorMode" inline-prompt active-text="dark" inactive-text="light" size="large"/>
     </ClientOnly>
   </div>
 
