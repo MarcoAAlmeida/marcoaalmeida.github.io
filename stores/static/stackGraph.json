@@ -3,7 +3,7 @@
     {
       "id": "0",
       "name": "TypeScript",
-      "symbol": "image://http://localhost:3001/devicon--typescript.png",
+      "symbol": "image://{{baseURL}}/devicon--typescript.png",
       "symbolSize": "30",
       "value": "an attempt to fix Javascript",
       "category": 0
@@ -11,7 +11,7 @@
     {
       "id": "1",
       "name": "Javascript",
-      "symbol": "image://http://localhost:3001/devicon--javascript.png",
+      "symbol": "image://{{baseURL}}/devicon--javascript.png",
       "symbolSize": "30",
       "value": "one of the most popular language",
       "category": 0
