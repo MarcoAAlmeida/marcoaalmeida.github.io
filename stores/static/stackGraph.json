@@ -1,15 +1,15 @@
 {
   "nodes": [
     {
-      "id": "0",
-      "name": "TypeScript",
-      "symbol": "image://{{baseURL}}/devicon--typescript.png",
+      "id": "Typescript",
+      "name": "Typescript",
+      "symbol": "image://{{baseURL}}/devicon--Typescript.png",
       "symbolSize": "30",
       "value": "an attempt to fix Javascript",
       "category": 0
     },
     {
-      "id": "1",
+      "id": "Javascript",
       "name": "Javascript",
       "symbol": "image://{{baseURL}}/devicon--javascript.png",
       "symbolSize": "30",
@@ -17,127 +17,163 @@
       "category": 0
     },
     {
-      "id": "2",
-      "name": "languages",
-      "symbol": "path://M216 40H40a16 16 0 0 0-16 16v144a16 16 0 0 0 16 16h176a16 16 0 0 0 16-16V56a16 16 0 0 0-16-16M92.8 145.6a8 8 0 1 1-9.6 12.8l-32-24a8 8 0 0 1 0-12.8l32-24a8 8 0 0 1 9.6 12.8L69.33 128Zm58.89-71.4l-32 112a8 8 0 1 1-15.38-4.4l32-112a8 8 0 0 1 15.38 4.4m53.11 60.2l-32 24a8 8 0 0 1-9.6-12.8l23.47-17.6l-23.47-17.6a8 8 0 1 1 9.6-12.8l32 24a8 8 0 0 1 0 12.8",
-      "symbolSize": "30",
-      "value": "used to code",
-      "category": 0
-    },
-    {
-      "id": "3",
-      "name": "frameworks",
-      "symbol": "path://M12.9 4.22C18.73 6.84 20 2 20 2s-1.11 6.07-6.21 8.55c-1.04.51-1.69.78-1.69.78L3.73 7.25l8.37-3.43s-.2-.06.8.4M11.12 22l-7.79-4.22V9.07l7.79 3.97zm1.76 0l7.8-4.22V9.07l-7.8 3.97z",
-      "symbolSize": "30",
-      "value": "should make things easier",
-      "category": 1
-    },
-    {
-      "id": "4",
-      "name": "vue",
+      "id": "Vue",
+      "name": "Vue",
       "symbol": "image://{{baseURL}}/devicon--vuejs.png",
       "symbolSize": "30",
       "value": "progressive JS framework",
       "category": 1
     },
     {
-      "id": "5",
-      "name": "nuxt",
+      "id": "Nuxt",
+      "name": "Nuxt",
       "symbol": "image://{{baseURL}}/vscode-icons--file-type-nuxt.png",
       "symbolSize": "30",
       "value": "based on Vue, inspired by Next",
       "category": 1
     },
     {
-      "id": "6",
+      "id": "Content",
       "name": "Content",
       "symbol": "image://{{baseURL}}/skill-icons--nuxtjs-dark.png",
       "symbolSize": "30",
       "value": "CMS for developers",
       "category": 1
+    },
+    {
+      "id": "Pinia",
+      "name": "Pinia",
+      "symbol": "image://{{baseURL}}/logos--pinia.png",
+      "symbolSize": "30",
+      "value": "local reactive data store - let your data talk to you",
+      "category": 2
+    },
+    {
+      "id": "gh-actions",
+      "name": "gh-actions",
+      "symbol": "image://{{baseURL}}/devicon-plain--githubactions.png",
+      "symbolSize": "30",
+      "value": "CI/CD for the common folk",
+      "category": 4
+    },
+    {
+      "id": "Element+",
+      "name": "Element+",
+      "symbol": "image://{{baseURL}}/logos--element.png",
+      "symbolSize": "30",
+      "value": "another UI library - easy to use",
+      "category": 3
+    },
+    {
+      "id": "Apache Echarts",
+      "name": "Apache Echarts",
+      "symbol": "image://{{baseURL}}/simple-icons--apacheecharts.png",
+      "symbolSize": "30",
+      "value": "nice and simple, gets the job done",
+      "category": 3
+    },
+    {
+      "id": "Iconify",
+      "name": "Iconify",
+      "symbol": "image://{{baseURL}}/simple-icons--iconify.png",
+      "symbolSize": "30",
+      "value": "huge icon library - because good icons show you care",
+      "category": 3
+    },
+    {
+      "id": "TailwindCSS",
+      "name": "TailwindCSS",
+      "symbol": "image://{{baseURL}}/devicon--tailwindcss.png",
+      "symbolSize": "30",
+      "value": "utility-first CSS library - a no-brainer (for good or worse)",
+      "category": 3
     }
+
+
   ],
   "links": [
     {
-      "source": "0",
-      "target": "1",
+      "source": "Typescript",
+      "target": "Javascript",
       "label": {
         "show": true,
         "formatter": "superset of"
       }
     },
     {
-      "source": "0",
-      "target": "2",
-      "label": {
-        "show": true,
-        "formatter": "is a"
-      }
-    },
-    {
-      "source": "1",
-      "target": "2",
-      "label": {
-        "show": true,
-        "formatter": "is a"
-      }
-    },
-    {
-      "source": "3",
-      "target": "4",
-      "label": {
-        "show": true,
-        "formatter": "is a"
-      }
-    },
-    {
-      "source": "0",
-      "target": "4",
+      "source": "Vue",
+      "target": "Typescript",
       "label": {
         "show": true,
         "formatter": "framework of"
       }
     },
     {
-      "source": "1",
-      "target": "4",
-      "label": {
-        "show": true,
-        "formatter": "framework of"
-      }
-    },
-    {
-      "source": "6",
-      "target": "5",
+      "source": "Nuxt",
+      "target": "Vue",
       "label": {
         "show": true,
         "formatter": "superset of"
       }
     },
     {
-      "source": "3",
-      "target": "5",
+      "source": "Content",
+      "target": "Nuxt",
       "label": {
         "show": true,
-        "formatter": "is a"
+        "formatter": "superset of"
       }
     },
     {
-      "source": "5",
-      "target": "4",
+      "source": "Pinia",
+      "target": "Nuxt",
       "label": {
         "show": true,
-        "formatter": "superset of"  
+        "formatter": "plugin of"
       }
     },
     {
-      "source": "3",
-      "target": "6",
+      "source": "TailwindCSS",
+      "target": "Nuxt",
       "label": {
         "show": true,
-        "formatter": "is a"
+        "formatter": "used by"
+      }
+    },
+    {
+      "source": "Iconify",
+      "target": "Nuxt",
+      "label": {
+        "show": true,
+        "formatter": "used by"
+      }
+    },
+    {
+      "source": "Element+",
+      "target": "Nuxt",
+      "label": {
+        "show": true,
+        "formatter": "used by"
+      }
+    },
+    {
+      "source": "Apache Echarts",
+      "target": "Nuxt",
+      "label": {
+        "show": true,
+        "formatter": "used by"
+      }
+    },
+    {
+      "source": "Content",
+      "target": "gh-actions",
+      "label": {
+        "show": true,
+        "formatter": "built on"
       }
     }
+
+
 
   ],
   "categories": [
@@ -146,7 +182,17 @@
     },
     {
       "name": "Frameworks"
+    },
+    {
+      "name": "Plugins"
+    },
+    {
+      "name": "Libraries"
+    },
+    {
+      "name": "Cloud"
     }
+
 
   ]
 }

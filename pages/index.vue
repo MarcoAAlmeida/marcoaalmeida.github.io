@@ -18,10 +18,8 @@ const config = useRuntimeConfig()
   <div class="mt-20 text-center">
     <ClientOnly>
       <TechTree />
-      <el-switch v-model="colorMode" inline-prompt active-text="dark" inactive-text="light" size="large"></el-switch>
+      <!--el-switch v-model="colorMode" inline-prompt active-text="dark" inactive-text="light" size="large"></!--el-switch-->
     </ClientOnly>
-    <Icon name="openmoji:construction" size="10em" />
-    <p>under construction, sorry for the inconvenience</p>
   </div>
 
 </template>

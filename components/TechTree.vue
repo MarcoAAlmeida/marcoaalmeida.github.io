@@ -241,6 +241,7 @@ function buildOption() {
                     formatter: '{b}'
                 },
                 layout: 'force',
+                edgeSymbol:['none','arrow'],
                 data: graph.value.nodes.map(
                     item => {
                         return {
@@ -252,10 +253,10 @@ function buildOption() {
                 categories: graph.value.categories,
                 roam: true,
                 force: {
-                    edgeLength: 150,
-                    repulsion: 500,
-                    gravity: 0.02,
-                    friction: 1
+                    edgeLength: 200,
+                    repulsion: 300,
+                    gravity: 0.015,
+                    friction: 0.02
                 },
                 label: {
                     position: 'top',
