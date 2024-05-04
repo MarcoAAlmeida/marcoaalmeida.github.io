@@ -9,6 +9,8 @@ const { setActiveTopMenu } = useNavStore()
 onMounted(() => {
   setActiveTopMenu('1')
 })
+
+const config = useRuntimeConfig()
 </script>
 
 <template>
@@ -20,6 +22,7 @@ onMounted(() => {
     </ClientOnly>
     <Icon name="openmoji:construction" size="10em" />
     <p>under construction, sorry for the inconvenience</p>
+    {{ config  }}
   </div>
 
 </template>
