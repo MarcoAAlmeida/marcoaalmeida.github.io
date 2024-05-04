@@ -23,6 +23,38 @@
       "symbolSize": "30",
       "value": "used to code",
       "category": 0
+    },
+    {
+      "id": "3",
+      "name": "frameworks",
+      "symbol": "path://M12.9 4.22C18.73 6.84 20 2 20 2s-1.11 6.07-6.21 8.55c-1.04.51-1.69.78-1.69.78L3.73 7.25l8.37-3.43s-.2-.06.8.4M11.12 22l-7.79-4.22V9.07l7.79 3.97zm1.76 0l7.8-4.22V9.07l-7.8 3.97z",
+      "symbolSize": "30",
+      "value": "should make things easier",
+      "category": 1
+    },
+    {
+      "id": "4",
+      "name": "vue",
+      "symbol": "image://{{baseURL}}/devicon--vuejs.png",
+      "symbolSize": "30",
+      "value": "progressive JS framework",
+      "category": 1
+    },
+    {
+      "id": "5",
+      "name": "nuxt",
+      "symbol": "image://{{baseURL}}/vscode-icons--file-type-nuxt.png",
+      "symbolSize": "30",
+      "value": "based on Vue, inspired by Next",
+      "category": 1
+    },
+    {
+      "id": "6",
+      "name": "Content",
+      "symbol": "image://{{baseURL}}/skill-icons--nuxtjs-dark.png",
+      "symbolSize": "30",
+      "value": "CMS for developers",
+      "category": 1
     }
   ],
   "links": [
@@ -49,11 +81,72 @@
         "show": true,
         "formatter": "is a"
       }
+    },
+    {
+      "source": "3",
+      "target": "4",
+      "label": {
+        "show": true,
+        "formatter": "is a"
+      }
+    },
+    {
+      "source": "0",
+      "target": "4",
+      "label": {
+        "show": true,
+        "formatter": "framework of"
+      }
+    },
+    {
+      "source": "1",
+      "target": "4",
+      "label": {
+        "show": true,
+        "formatter": "framework of"
+      }
+    },
+    {
+      "source": "6",
+      "target": "5",
+      "label": {
+        "show": true,
+        "formatter": "superset of"
+      }
+    },
+    {
+      "source": "3",
+      "target": "5",
+      "label": {
+        "show": true,
+        "formatter": "is a"
+      }
+    },
+    {
+      "source": "5",
+      "target": "4",
+      "label": {
+        "show": true,
+        "formatter": "superset of"  
+      }
+    },
+    {
+      "source": "3",
+      "target": "6",
+      "label": {
+        "show": true,
+        "formatter": "is a"
+      }
     }
+
   ],
   "categories": [
     {
       "name": "Languages"
+    },
+    {
+      "name": "Frameworks"
     }
+
   ]
 }
