@@ -11,17 +11,21 @@ onMounted(() => {
 })
 
 const config = useRuntimeConfig()
+
+const treeTech = useTechTreeStore()
+const { layout } = storeToRefs(treeTech)
+
+const circularLayout = ref(layout.value === 'circular')
+watch(circularLayout, (enableCircular) => layout.value = enableCircular ? 'circular' : 'force')
+
 </script>
 
 <template>
-
   <div class="mt-15 text-center">
     <ClientOnly>
       <TechTree />
-      <el-switch v-model="colorMode" inline-prompt active-text="dark" inactive-text="light" size="large"/>
     </ClientOnly>
   </div>
-
 </template>
 
 <style></style>
