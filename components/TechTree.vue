@@ -20,9 +20,8 @@ use([
 ]);
 
 const treeTech = useTechTreeStore()
-const {getOption} = useTechTreeStore()
 
-const { theme } = storeToRefs(treeTech)
+const { theme, filteredGraph, localConfig, option } = storeToRefs(treeTech)
 registerTheme("treeTech", theme.value);
 
 const store = useStackStore()
@@ -32,7 +31,10 @@ const color = useColorMode()
 
 const config = useRuntimeConfig()
 
-const option = computed(() => getOption(graph.value, config))
+onMounted(()=>{
+    filteredGraph.value = graph.value
+    localConfig.value = config
+})
 
 </script>
 

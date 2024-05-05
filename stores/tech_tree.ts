@@ -5,6 +5,24 @@ export const useTechTreeStore = defineStore("techTree", () => {
   const contrastColor = "#B9B8CE";
   const backgroundColor = "#303030";
 
+  const layout = ref("circular");
+  const edgeLength = ref(200);
+  const repulsion = ref(300);
+  const gravity = ref(0.02);
+  const friction = ref(0.02);
+  const filteredGraph = ref({
+    nodes: [],
+    links: [],
+    categories: [],
+  });
+  const localConfig = ref({
+    public: {
+      content: {
+        wsUrl: "",
+      },
+    },
+  });
+
   const axisCommon = function () {
     return {
       axisLine: {
@@ -182,7 +200,7 @@ export const useTechTreeStore = defineStore("techTree", () => {
     },
   });
 
-  const getOption = (graph: any, config: any) => {
+  const option = computed(() => {
     return {
       title: {
         text: "TechTree",
@@ -193,8 +211,7 @@ export const useTechTreeStore = defineStore("techTree", () => {
       tooltip: {},
       legend: [
         {
-          // selectedMode: 'single',
-          data: graph.categories.map(function (a: any) {
+          data: filteredGraph.value.categories.map(function (a: any) {
             return a.name;
           }),
         },
@@ -212,25 +229,25 @@ export const useTechTreeStore = defineStore("techTree", () => {
           },
           layout: layout.value,
           edgeSymbol: ["none", "arrow"],
-          data: graph.nodes.map((item: any) => {
+          data: filteredGraph.value.nodes.map((item: any) => {
             return {
               ...item,
               symbol: item.symbol.replace(
                 "{{baseURL}}",
-                config.public.content.wsUrl.indexOf("localhost") !== -1
+                localConfig.value.public.content.wsUrl.indexOf("localhost") !== -1
                   ? "http://localhost:3001"
                   : "https://marcoaalmeida.github.io/"
               ),
             };
           }),
-          links: graph.links,
-          categories: graph.categories,
+          links: filteredGraph.value.links,
+          categories: filteredGraph.value.categories,
           roam: true,
           force: {
-            edgeLength: 200,
-            repulsion: 300,
-            gravity: 0.02,
-            friction: 0.02,
+            edgeLength: edgeLength.value,
+            repulsion: repulsion.value,
+            gravity: gravity.value,
+            friction: friction.value,
           },
           lineStyle: {
             color: "source",
@@ -249,13 +266,17 @@ export const useTechTreeStore = defineStore("techTree", () => {
         },
       ],
     };
-  };
-
-  const layout = ref('circular')
+  });
 
   return {
     theme,
     layout,
-    getOption
+    edgeLength,
+    repulsion,
+    gravity,
+    friction,
+    filteredGraph,
+    localConfig,
+    option,
   };
 });
