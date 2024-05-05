@@ -3,7 +3,7 @@ import { acceptHMRUpdate, defineStore } from "pinia";
 
 export const useTechTreeStore = defineStore("techTree", () => {
   const contrastColor = "#B9B8CE";
-  const backgroundColor = "#303030";
+  const backgroundColor = "#111111";
 
   const layout = ref("circular");
   const edgeLength = ref(200);
@@ -263,7 +263,7 @@ export const useTechTreeStore = defineStore("techTree", () => {
           tooltip: {
             show: false,
           },
-          zoom:0.9
+          zoom:0.85
         },
       ],
     };

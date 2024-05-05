@@ -1,7 +1,7 @@
 @forward 'element-plus/theme-chalk/src/dark/var.scss' with (
   $bg-color: (
-    'page': #0a0a0a,
-    'overlay': #1d1e1f,
+    'page': #303030,
+    'overlay': #303030,
   )
 
 );
@@ -12,5 +12,5 @@
 
 :root.dark {
   --el-color-primary: rgb(7, 117, 251);
-  --el-fill-color-blank:#1d1e1e;
+  --el-fill-color-blank:#303030;
 }
