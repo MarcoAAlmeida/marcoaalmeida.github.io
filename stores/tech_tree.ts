@@ -263,6 +263,7 @@ export const useTechTreeStore = defineStore("techTree", () => {
           tooltip: {
             show: false,
           },
+          zoom:0.9
         },
       ],
     };

@@ -21,7 +21,7 @@ watch(circularLayout, (enableCircular) => layout.value = enableCircular ? 'circu
 </script>
 
 <template>
-  <div class="mt-15 text-center">
+  <div class="mt-20 text-center">
     <ClientOnly>
       <TechTree />
     </ClientOnly>
