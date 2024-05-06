@@ -49,7 +49,7 @@ const colorMode = computed({
                     <Icon class="dark:text-white m-1" name="mdi:gear" size="1.2em" @click="dialogFormVisible = true" />
                 </nuxt-link>
             </div>
-            <div class="p-0 mt-4">
+            <div class="p-0 mt-4 mr-4">
                 <nuxt-link to="https://github.com/MarcoAAlmeida" target="_blank">
                     <Icon name="mdi:github" class="dark:text-white m-1" size="1.2em" />
                 </nuxt-link>

@@ -41,6 +41,7 @@ export default defineNuxtConfig({
     "@nuxtjs/color-mode",
     "nuxt-icon",
     "@nuxt/content",
+    "nuxt-monaco-editor"
   ],
 
   // vueuse
@@ -91,5 +92,13 @@ export default defineNuxtConfig({
     global: true,
     dirs: ["~/components"],
   },
-  extends: '@nuxt-themes/typography'
+  extends: '@nuxt-themes/typography',
+  monacoEditor: {
+    // These are default values:
+    locale: 'en',
+    componentName: {
+      codeEditor: 'MonacoEditor',
+      diffEditor: 'MonacoDiffEditor'
+    }
+  }
 });

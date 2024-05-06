@@ -1,31 +1,28 @@
 <script setup>
-const color = useColorMode()
-const colorMode = computed({
-  get: () => color.value === 'dark',
-  set: () => (color.preference = (color.value === 'dark' ? 'light' : 'dark')),
-})
 
 const { setActiveTopMenu } = useNavStore()
 onMounted(() => {
   setActiveTopMenu('1')
 })
 
-const config = useRuntimeConfig()
 
-const treeTech = useTechTreeStore()
-const { layout } = storeToRefs(treeTech)
+const activeName = ref('stack')
 
-const circularLayout = ref(layout.value === 'circular')
-watch(circularLayout, (enableCircular) => layout.value = enableCircular ? 'circular' : 'force')
+const value = ref('type SomeType= {}')
 
 </script>
 
 <template>
-  <div class="mt-20 text-center">
-    <ClientOnly>
-      <TechTree />
-    </ClientOnly>
-  </div>
+    <el-tabs v-model="activeName" class="mt-15 mr-2 ml-2 demo-tabs">
+      <el-tab-pane label="stack" name="stack">
+        <ClientOnly>
+          <TechTree />
+        </ClientOnly>
+      </el-tab-pane>
+      <el-tab-pane label="raw" name="raw">
+        <MonacoEditor v-model="value" class="min-h-80" lang="typescript" />
+      </el-tab-pane>
+    </el-tabs>
 </template>
 
 <style></style>
