@@ -31,9 +31,10 @@ const color = useColorMode()
 
 const config = useRuntimeConfig()
 
-const handleDblClick = (params) => {
+const handleClick = (params) => {
     if (!params.data.hasOwnProperty('source')){
-        navigateTo(params.data.slug)
+        console.log(params)
+        //navigateTo(params.data.slug)
     }
 }
 
@@ -46,7 +47,7 @@ onMounted(() => {
 
 
 <template>
-    <v-chart class="chart" @dblclick="handleDblClick" :option="option" :theme="color.value === 'dark' ? 'treeTech' : 'light'" autoresize />
+    <v-chart class="chart" @click="handleClick" :option="option" :theme="color.value === 'dark' ? 'treeTech' : 'light'" autoresize />
 </template>
 
 
