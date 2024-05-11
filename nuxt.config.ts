@@ -1,5 +1,11 @@
 // https://v3.nuxtjs.org/docs/directory-structure/nuxt.config
 export default defineNuxtConfig({
+  ssr: false,
+  content: {
+    experimental: {
+      clientDB: true
+    }
+  },
   app: {
     // head
     head: {
@@ -23,7 +29,11 @@ export default defineNuxtConfig({
       ],
     },
   },
-
+  nitro: {
+    prerender: {
+      routes: ['/sitemap.xml']
+    }
+  },
   // css
   css: ["~/assets/scss/index.scss"],
 
@@ -41,7 +51,8 @@ export default defineNuxtConfig({
     "@nuxtjs/color-mode",
     "nuxt-icon",
     "@nuxt/content",
-    "nuxt-monaco-editor"
+    "nuxt-monaco-editor",
+    "@nuxtjs/sitemap"
   ],
 
   // vueuse
@@ -94,5 +105,6 @@ export default defineNuxtConfig({
       codeEditor: 'MonacoEditor',
       diffEditor: 'MonacoDiffEditor'
     }
-  }
+  },
+
 });

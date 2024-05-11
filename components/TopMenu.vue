@@ -37,7 +37,7 @@ const colorMode = computed({
             </el-menu-item>
             <el-sub-menu index="2">
                 <template #title>Docs</template>
-                <nuxt-link to="/stack">
+                <nuxt-link to="/stack/">
                     <el-menu-item index="2-1">
                         stack
                     </el-menu-item>
