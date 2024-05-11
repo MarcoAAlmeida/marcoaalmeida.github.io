@@ -1,6 +1,5 @@
 // https://v3.nuxtjs.org/docs/directory-structure/nuxt.config
 export default defineNuxtConfig({
-  ssr: false,
   app: {
     // head
     head: {

@@ -3,7 +3,8 @@
 
 <template>
   <main class="mt-12 p-4">
-    <ContentDoc />
-
+    <ClientOnly>
+      <ContentDoc />
+    </ClientOnly>
   </main>
 </template>
