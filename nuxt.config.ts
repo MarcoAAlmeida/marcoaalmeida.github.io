@@ -80,12 +80,6 @@ export default defineNuxtConfig({
   },
   content: {
     sources: {
-      // overwrite default source AKA `content` directory
-      content: {
-        driver: "fs",
-        prefix: "/docs",
-        base: "./content",
-      },
     },
   },
   components: {
