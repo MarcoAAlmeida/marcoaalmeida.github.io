@@ -34,7 +34,17 @@ export default defineNuxtConfig({
     prerender: {
       routes: [
         '/sitemap.xml',
-        '/stack/vue'
+        '/stack/vue',
+        '/stack/apacheecharts',
+        '/stack/content',
+        '/stack/element+',
+        '/stack/gh-actions',
+        '/stack/iconify',
+        '/stack/javascript',
+        '/stack/nuxt',
+        '/stack/pinia',
+        '/stack/tailwindcss',
+        '/stack/typescript',
       ],
     }
   },

@@ -46,7 +46,7 @@ onMounted(() => {
 
 
 <template>
-    <v-chart class="chart" @click="handleClick" :option="option" :theme="color.value === 'dark' ? 'treeTech' : 'light'" autoresize />
+    <v-chart class="chart" @dblclick="handleClick" :option="option" :theme="color.value === 'dark' ? 'treeTech' : 'light'" autoresize />
 </template>
 
 
