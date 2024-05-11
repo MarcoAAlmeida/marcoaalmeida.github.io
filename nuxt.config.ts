@@ -6,6 +6,11 @@ export default defineNuxtConfig({
       clientDB: true
     }
   },
+  router: {
+    options: {
+      strict: true,
+    },
+  },
   app: {
     // head
     head: {
