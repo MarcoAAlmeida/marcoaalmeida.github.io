@@ -33,8 +33,7 @@ const config = useRuntimeConfig()
 
 const handleClick = (params) => {
     if (!params.data.hasOwnProperty('source')){
-        console.log(params)
-        //navigateTo(params.data.slug)
+        navigateTo(params.data.slug)
     }
 }
 
