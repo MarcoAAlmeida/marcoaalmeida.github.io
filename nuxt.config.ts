@@ -30,8 +30,9 @@ export default defineNuxtConfig({
     },
   },
   nitro: {
+    preset: 'github_pages',
     prerender: {
-      routes: ['/sitemap.xml']
+      routes: ['/sitemap.xml'],
     }
   },
   // css
@@ -89,10 +90,6 @@ export default defineNuxtConfig({
   build: {
     transpile: ["echarts", "rxjs"],
   },
-  content: {
-    sources: {
-    },
-  },
   components: {
     global: true,
     dirs: ["~/components"],
@@ -106,5 +103,8 @@ export default defineNuxtConfig({
       diffEditor: 'MonacoDiffEditor'
     }
   },
+  site:{
+    url:"https://marcoaalmeida.github.io/"
+  }
 
 });
