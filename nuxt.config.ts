@@ -32,7 +32,10 @@ export default defineNuxtConfig({
   nitro: {
     preset: 'github_pages',
     prerender: {
-      routes: ['/sitemap.xml'],
+      routes: [
+        '/sitemap.xml',
+        '/stack/vue'
+      ],
     }
   },
   // css
