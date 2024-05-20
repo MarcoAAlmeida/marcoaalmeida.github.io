@@ -1,6 +1,12 @@
+---
+title: 'Nuxt'
+description: 'based on Vue, inspired by NextJS'
+isSupersetOf: "/stack/vue"
+head: true
+---
 # Nuxt
 
-based on Vue, inspired by Next
+based on Vue, inspired by NextJS
 
 [Nuxt Awesome](https://github.com/nuxt/awesome)
 [Nuxt Modules](https://nuxt.com/modules)

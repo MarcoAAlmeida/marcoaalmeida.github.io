@@ -1,3 +1,10 @@
+---
+title: 'Apache Echarts'
+description: 'graphical data library - nice and simple, gets the job done'
+isUsedBy: '/stack/nuxt'
+head: true
+---
+
 # Apache Echarts
 
 graphical data library - nice and simple, gets the job done

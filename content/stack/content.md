@@ -1,3 +1,11 @@
+---
+title: 'Nuxt Content'
+description: 'CMS for developers'
+isSupersetOf: '/stack/nuxt'
+builtOn: '/stack/gh-actions'
+head: true
+---
+
 # Nuxt Content
 
 CMS for developers

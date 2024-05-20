@@ -1,6 +1,13 @@
+---
+title: "Stack"
+description: "Some technologies powering this blog"
+isUsedBy: "/stack"
+head: true
+---
+
 # Stack
 
-Some technologies powering this blog
+Some technologies powering this blog v2
 
 ::stackGallery
 ::
@@ -9,5 +16,3 @@ Some technologies powering this blog
 ## More Content
 
 Explore the <a href="/api/_content/query" target="_blank">Nuxt Content API</a>
-
-

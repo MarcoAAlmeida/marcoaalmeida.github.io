@@ -8,7 +8,21 @@ onMounted(() => {
 
 const activeName = ref('stack')
 
-const value = ref('type SomeType= {}')
+const { data: articles } = await useAsyncData("stack", 
+  () => queryContent("/stack").where({ _file: { $not: { $contains: 'index' } }} ).find())
+
+const raw = ref(JSON.stringify(articles.value, null, 2))
+
+const relationships = ref(JSON.stringify(
+  articles.value
+    .map(el => { return {
+      id: el.title,
+      slug:el._path,
+      isUsedBy: el.isUsedBy, 
+      isPluginOf: el.isPluginOf, 
+      isFrameworkOf: el.isFrameworkOf, 
+      isSupersetOf: el.isSupersetOf, 
+    }}), null, 2))
 
 </script>
 
@@ -19,7 +33,10 @@ const value = ref('type SomeType= {}')
         <TechTree />
       </el-tab-pane>
       <el-tab-pane label="raw" name="raw">
-        <MonacoEditor v-model="value" class="min-h-80" lang="typescript" />
+        <MonacoEditor v-model="raw" class="min-h-120" lang="json" />
+      </el-tab-pane>
+      <el-tab-pane label="relationships" name="relationships">
+        <MonacoEditor v-model="relationships" class="min-h-120" lang="json" />
       </el-tab-pane>
     </el-tabs>
   </ClientOnly>
