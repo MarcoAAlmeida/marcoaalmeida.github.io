@@ -8,6 +8,7 @@
   --tea-green: #C4FFB2;
   --mindaro: #D6F7A3;
   --rose-taupe: #945D5E;
+  --rose-taupe-dark: #7A4A4E;
 }
 
 /* Material Design custom color overrides */
@@ -207,8 +208,8 @@ body {
 .mdx-hero__content .md-button--primary:hover {
   transform: translateY(-2px);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-  background-color: #7A4A4E;
-  border-color: #7A4A4E;
+  background-color: var(--rose-taupe-dark);
+  border-color: var(--rose-taupe-dark);
 }
 
 .mdx-hero__content .md-button:not(.md-button--primary) {
@@ -220,7 +221,7 @@ body {
 
 .mdx-hero__content .md-button:not(.md-button--primary):hover {
   background: rgba(55, 18, 60, 0.25);
-  border-color: #7A4A4E;
+  border-color: var(--rose-taupe-dark);
   transform: translateY(-2px);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
