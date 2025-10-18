@@ -55,7 +55,6 @@ body {
   position: absolute;
   width: 400px;
   height: 400px;
-  opacity: 1;
 }
 
 /* Layer 1 (background) - large, lighter blobs */
@@ -108,7 +107,7 @@ body {
   position: sticky;
   top: 0;
   z-index: 4;
-  background-color: rgba(107, 73, 132, 0.0);
+  background-color: transparent;
   transition: background-color 300ms ease;
 }
 
@@ -134,6 +133,7 @@ body {
 /* Wave separator removed - no longer needed */
 .mdx-container::after {
   display: none;
+  content: none;
 }
 
 /* Hide default sidebars and content on landing page */

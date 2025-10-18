@@ -138,8 +138,8 @@
         ticking = false;
       }
       
-      // Initial check for header state
-      updateParallax();
+      // Initial check for header state (wrapped in RAF to avoid layout thrashing)
+      window.requestAnimationFrame(updateParallax);
       
       window.addEventListener('scroll', function() {
         if (!ticking) {
