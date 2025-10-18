@@ -1,6 +1,11 @@
 /* Sunset-themed custom landing page styles */
 
-/* Container with wave separator at bottom */
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Full-width background container (edge-to-edge) */
 .mdx-container {
   background: linear-gradient(
     to bottom,
@@ -17,6 +22,30 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  /* Make background fill entire viewport width edge-to-edge */
+  width: 100vw;
+  margin-left: calc(-1 * (100vw - 100%) / 2);
+  box-sizing: border-box;
+}
+
+/* Parallax layers */
+.mdx-parallax-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+  background: linear-gradient(
+    to bottom,
+    #FF6B6B 0%,
+    #FA7A5A 20%,
+    #FF8E53 40%,
+    #E94057 60%,
+    #C2366D 80%,
+    #8B5A99 100%
+  );
+  will-change: transform;
 }
 
 /* Wave separator at bottom using SVG */
@@ -200,6 +229,56 @@
   }
 }
 
+/* Content sections below hero */
+.mdx-content-sections {
+  background: #f5f5f5;
+  padding: 4rem 1.5rem;
+  position: relative;
+  z-index: 2;
+  width: 100vw;
+  margin-left: calc(-1 * (100vw - 100%) / 2);
+  box-sizing: border-box;
+}
+
+.mdx-content-section {
+  max-width: 1200px;
+  margin: 0 auto 3rem auto;
+  padding: 2rem;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mdx-content-section:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.mdx-content-section h2 {
+  color: #E94057;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.mdx-content-section p {
+  color: #333;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+
+.mdx-content-section:last-child {
+  margin-bottom: 0;
+}
+
+/* Parallax effect for hero image */
+.mdx-hero__image {
+  will-change: transform;
+  transition: transform 0.1s ease-out;
+}
+
 /* Ensure header stays visible with static positioning */
 .md-header {
   position: sticky;
@@ -214,9 +293,21 @@
 
 .md-content {
   padding: 0;
+  max-width: none;
 }
 
 .md-content__inner {
+  margin: 0;
+  padding: 0;
+  max-width: none;
+}
+
+/* Remove default margins from main */
+.md-main {
+  flex-grow: 1;
+}
+
+.md-main__inner {
   margin: 0;
   padding: 0;
 }

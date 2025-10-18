@@ -17,6 +17,10 @@ extra_css:
 
 nav:
   - Home: index.md
+  - Projects: projects.md
+  - About: about.md
+  - Experience: experience.md
+  - Contact: contact.md
 
 markdown_extensions:
   - admonition
