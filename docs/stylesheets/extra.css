@@ -1,5 +1,10 @@
 /* Sunset-themed custom landing page styles */
 
+/* CSS custom properties */
+:root {
+  --edge-to-edge-margin: calc(-1 * (100vw - 100%) / 2);
+}
+
 /* Smooth scrolling */
 html {
   scroll-behavior: smooth;
@@ -24,7 +29,7 @@ html {
   justify-content: center;
   /* Make background fill entire viewport width edge-to-edge */
   width: 100vw;
-  margin-left: calc(-1 * (100vw - 100%) / 2);
+  margin-left: var(--edge-to-edge-margin);
   box-sizing: border-box;
 }
 
@@ -236,7 +241,7 @@ html {
   position: relative;
   z-index: 2;
   width: 100vw;
-  margin-left: calc(-1 * (100vw - 100%) / 2);
+  margin-left: var(--edge-to-edge-margin);
   box-sizing: border-box;
 }
 

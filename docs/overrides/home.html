@@ -76,9 +76,10 @@
     document.addEventListener('DOMContentLoaded', function() {
       const parallaxBg = document.getElementById('parallax-bg');
       const parallaxImage = document.getElementById('parallax-image');
+      let ticking = false;
       
-      // Dramatic parallax effect with different speeds
-      window.addEventListener('scroll', function() {
+      // Dramatic parallax effect with different speeds using requestAnimationFrame
+      function updateParallax() {
         const scrolled = window.pageYOffset;
         
         // Background moves slower (0.5x speed) - creates depth
@@ -86,9 +87,18 @@
           parallaxBg.style.transform = 'translateY(' + (scrolled * 0.5) + 'px)';
         }
         
-        // Hero image moves faster (1.5x speed) - dramatic effect
+        // Hero image moves slower (0.3x speed) - creates depth and dramatic effect
         if (parallaxImage) {
           parallaxImage.style.transform = 'translateY(' + (scrolled * 0.3) + 'px)';
+        }
+        
+        ticking = false;
+      }
+      
+      window.addEventListener('scroll', function() {
+        if (!ticking) {
+          window.requestAnimationFrame(updateParallax);
+          ticking = true;
         }
       });
     });
