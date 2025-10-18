@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block htmltitle %}
+  <title>{{ config.site_name }}</title>
+{% endblock %}
+
+{% block header %}
+  {{ super() }}
+{% endblock %}
+
+{% block tabs %}
+  {{ super() }}
+{% endblock %}
+
+{% block site_nav %}
+{% endblock %}
+
+{% block content %}
+  <div class="mdx-container">
+    <div class="mdx-hero">
+      <div class="mdx-hero__content">
+        <h1>Marco A Almeida</h1>
+        <p>Software Engineer &amp; Solutions Architect</p>
+        <a href="#projects" class="md-button md-button--primary">
+          View Projects
+        </a>
+        <a href="#about" class="md-button">
+          About Me
+        </a>
+      </div>
+      <div class="mdx-hero__image">
+        <img src="{{ 'assets/images/sunset-landscape.svg' | url }}" alt="Sunset Landscape" draggable="false">
+      </div>
+    </div>
+  </div>
+{% endblock %}
+
+{% block footer %}
+{% endblock %}

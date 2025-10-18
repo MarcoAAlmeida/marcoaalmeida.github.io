@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" width="1200" height="900">
+  <!-- Sky gradient background -->
+  <defs>
+    <linearGradient id="skyGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#FF6B6B;stop-opacity:1" />
+      <stop offset="25%" style="stop-color:#FA7A5A;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#FF8E53;stop-opacity:1" />
+      <stop offset="75%" style="stop-color:#E94057;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#C2366D;stop-opacity:1" />
+    </linearGradient>
+    
+    <radialGradient id="sunGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#FFF4E0;stop-opacity:1" />
+      <stop offset="40%" style="stop-color:#FFE5B4;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#FF8E53;stop-opacity:0" />
+    </radialGradient>
+  </defs>
+  
+  <!-- Sky background -->
+  <rect x="0" y="0" width="1200" height="900" fill="url(#skyGradient)"/>
+  
+  <!-- Sun with glow -->
+  <circle cx="900" cy="250" r="180" fill="url(#sunGlow)"/>
+  <circle cx="900" cy="250" r="80" fill="#FFF4E0"/>
+  
+  <!-- Sun rays (subtle) -->
+  <line x1="900" y1="70" x2="900" y2="150" stroke="#FFE5B4" stroke-width="4" opacity="0.6"/>
+  <line x1="900" y1="350" x2="900" y2="430" stroke="#FFE5B4" stroke-width="4" opacity="0.6"/>
+  <line x1="720" y1="250" x2="800" y2="250" stroke="#FFE5B4" stroke-width="4" opacity="0.6"/>
+  <line x1="1000" y1="250" x2="1080" y2="250" stroke="#FFE5B4" stroke-width="4" opacity="0.6"/>
+  <line x1="770" y1="120" x2="830" y2="180" stroke="#FFE5B4" stroke-width="3" opacity="0.5"/>
+  <line x1="1030" y1="120" x2="970" y2="180" stroke="#FFE5B4" stroke-width="3" opacity="0.5"/>
+  <line x1="770" y1="380" x2="830" y2="320" stroke="#FFE5B4" stroke-width="3" opacity="0.5"/>
+  <line x1="1030" y1="380" x2="970" y2="320" stroke="#FFE5B4" stroke-width="3" opacity="0.5"/>
+  
+  <!-- Distant mountain layer (lightest purple) -->
+  <path d="M 0 550 L 200 450 L 350 480 L 500 420 L 650 460 L 800 400 L 950 440 L 1100 380 L 1200 420 L 1200 900 L 0 900 Z" 
+        fill="#A78BB5" opacity="0.7"/>
+  
+  <!-- Middle mountain layer (medium purple) -->
+  <path d="M 0 620 L 150 550 L 300 580 L 450 520 L 600 560 L 750 500 L 900 540 L 1050 480 L 1200 520 L 1200 900 L 0 900 Z" 
+        fill="#8B5A99"/>
+  
+  <!-- Near mountain layer (darker purple) -->
+  <path d="M 0 680 L 180 620 L 320 650 L 480 600 L 640 630 L 800 590 L 950 620 L 1120 570 L 1200 610 L 1200 900 L 0 900 Z" 
+        fill="#6B4984"/>
+  
+  <!-- Foreground hills (deep blue-purple) -->
+  <path d="M 0 750 L 120 700 L 240 720 L 360 680 L 480 710 L 600 690 L 720 720 L 840 700 L 960 730 L 1080 710 L 1200 740 L 1200 900 L 0 900 Z" 
+        fill="#2C3E50"/>
+  
+  <!-- Very front silhouette (darkest) -->
+  <path d="M 0 820 L 100 790 L 200 800 L 300 780 L 400 800 L 500 790 L 600 810 L 700 800 L 800 820 L 900 810 L 1000 830 L 1100 820 L 1200 840 L 1200 900 L 0 900 Z" 
+        fill="#1A2332"/>
+</svg>

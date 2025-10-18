@@ -3,13 +3,17 @@ site_url: https://marcoaalmeida.github.io/
 
 theme:
   name: material
+  custom_dir: docs/overrides
   palette:
-    primary: indigo
-    accent: indigo
+    primary: deep orange
+    accent: pink
   features:
     - navigation.instant
     - navigation.tracking
     - navigation.top
+
+extra_css:
+  - stylesheets/extra.css
 
 nav:
   - Home: index.md
