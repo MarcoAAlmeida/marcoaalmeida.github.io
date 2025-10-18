@@ -5,8 +5,8 @@ theme:
   name: material
   custom_dir: docs/overrides
   palette:
-    primary: deep orange
-    accent: pink
+    primary: custom
+    accent: custom
   features:
     - navigation.instant
     - navigation.tracking
