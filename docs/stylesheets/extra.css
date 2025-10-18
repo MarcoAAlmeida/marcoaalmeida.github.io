@@ -1,8 +1,13 @@
-/* Sunset-themed custom landing page styles */
+/* Sunset-themed custom landing page styles with parallax */
 
 /* CSS custom properties */
 :root {
   --edge-to-edge-margin: calc(-1 * (100vw - 100%) / 2);
+  --sunset-coral: #FF6B6B;
+  --sunset-orange: #FF8E53;
+  --sunset-rose: #E94057;
+  --sunset-purple: #8B5A99;
+  --sunset-deep-purple: #6B4984;
 }
 
 /* Smooth scrolling */
@@ -10,35 +15,17 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Full-width background container (edge-to-edge) */
-.mdx-container {
-  background: linear-gradient(
-    to bottom,
-    #FF6B6B 0%,
-    #FA7A5A 20%,
-    #FF8E53 40%,
-    #E94057 60%,
-    #C2366D 80%,
-    #8B5A99 100%
-  );
-  position: relative;
-  padding: 4rem 1.5rem;
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  /* Make background fill entire viewport width edge-to-edge */
-  width: 100vw;
-  margin-left: var(--edge-to-edge-margin);
-  box-sizing: border-box;
+/* Body background to match gradient bottom */
+body {
+  background: #8B5A99;
 }
 
-/* Parallax layers */
-.mdx-parallax-bg {
+/* Fixed parallax background that fills entire viewport */
+.mdx-parallax-background {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   z-index: -1;
   background: linear-gradient(
@@ -50,22 +37,103 @@ html {
     #C2366D 80%,
     #8B5A99 100%
   );
+  overflow: hidden;
+}
+
+/* Parallax layers */
+.mdx-parallax-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   will-change: transform;
 }
 
-/* Wave separator at bottom using SVG */
-.mdx-container::after {
-  content: "";
+/* Organic blob positioning */
+.blob {
   position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 200px;
-  background-image: url('../assets/images/wave-separator.svg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: bottom;
-  pointer-events: none;
+  width: 400px;
+  height: 400px;
+}
+
+/* Layer 1 (background) - large, lighter blobs */
+.mdx-parallax-layer-1 .blob-1 {
+  top: 10%;
+  left: 5%;
+  width: 500px;
+  height: 500px;
+}
+
+.mdx-parallax-layer-1 .blob-2 {
+  top: 50%;
+  right: 10%;
+  width: 450px;
+  height: 450px;
+}
+
+/* Layer 2 (midground) - medium blobs */
+.mdx-parallax-layer-2 .blob-3 {
+  top: 30%;
+  left: 15%;
+  width: 380px;
+  height: 380px;
+}
+
+.mdx-parallax-layer-2 .blob-4 {
+  top: 60%;
+  right: 20%;
+  width: 400px;
+  height: 400px;
+}
+
+/* Layer 3 (foreground) - smaller, darker blobs */
+.mdx-parallax-layer-3 .blob-5 {
+  top: 70%;
+  left: 25%;
+  width: 350px;
+  height: 350px;
+}
+
+.mdx-parallax-layer-3 .blob-6 {
+  top: 20%;
+  right: 15%;
+  width: 320px;
+  height: 320px;
+}
+
+/* Transparent header with scroll transition */
+.md-header {
+  position: sticky;
+  top: 0;
+  z-index: 4;
+  background-color: transparent;
+  transition: background-color 300ms ease;
+}
+
+.md-header.scrolled {
+  background-color: rgba(107, 73, 132, 1.0);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Full-width hero container */
+.mdx-container {
+  background: transparent;
+  position: relative;
+  padding: 4rem 1.5rem;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  margin-left: var(--edge-to-edge-margin);
+  box-sizing: border-box;
+}
+
+/* Wave separator removed - no longer needed */
+.mdx-container::after {
+  display: none;
+  content: none;
 }
 
 /* Hide default sidebars and content on landing page */
@@ -80,17 +148,17 @@ html {
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 3rem;
+  justify-content: center;
   position: relative;
   z-index: 1;
 }
 
-/* Hero content (left side) */
+/* Hero content */
 .mdx-hero__content {
   flex: 1;
   color: #fff;
-  text-align: left;
+  text-align: center;
+  max-width: 800px;
 }
 
 .mdx-hero__content h1 {
@@ -148,31 +216,6 @@ html {
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
-/* Hero image (right side) */
-.mdx-hero__image {
-  flex: 1;
-  max-width: 550px;
-  position: relative;
-}
-
-.mdx-hero__image img {
-  width: 100%;
-  height: auto;
-  display: block;
-  filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.3));
-  animation: float 6s ease-in-out infinite;
-}
-
-/* Floating animation for image */
-@keyframes float {
-  0%, 100% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-20px);
-  }
-}
-
 /* Responsive breakpoints */
 
 /* Tablet and smaller (below 960px) */
@@ -194,12 +237,19 @@ html {
     font-size: 1.25rem;
   }
   
-  .mdx-hero__image {
-    max-width: 450px;
-  }
-  
   .mdx-container {
     padding: 3rem 1.5rem;
+  }
+  
+  /* Adjust blob sizes for tablets */
+  .blob {
+    width: 300px;
+    height: 300px;
+  }
+  
+  .mdx-parallax-layer-1 .blob-1 {
+    width: 350px;
+    height: 350px;
   }
 }
 
@@ -220,23 +270,31 @@ html {
     margin: 0.5rem auto;
   }
   
-  .mdx-hero__image {
-    max-width: 350px;
-  }
-  
   .mdx-container {
     padding: 2rem 1rem;
     min-height: auto;
   }
   
-  .mdx-container::after {
-    height: 120px;
+  /* Smaller blobs for mobile */
+  .blob {
+    width: 200px;
+    height: 200px;
+  }
+  
+  .mdx-parallax-layer-1 .blob-1 {
+    width: 250px;
+    height: 250px;
   }
 }
 
 /* Content sections below hero */
 .mdx-content-sections {
-  background: #f5f5f5;
+  background: linear-gradient(
+    to bottom,
+    rgba(139, 90, 153, 0.95) 0%,
+    rgba(107, 73, 132, 0.98) 50%,
+    rgba(42, 49, 68, 1) 100%
+  );
   padding: 4rem 1.5rem;
   position: relative;
   z-index: 2;
@@ -249,7 +307,7 @@ html {
   max-width: 1200px;
   margin: 0 auto 3rem auto;
   padding: 2rem;
-  background: #fff;
+  background: rgba(255, 255, 255, 0.95);
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -276,19 +334,6 @@ html {
 
 .mdx-content-section:last-child {
   margin-bottom: 0;
-}
-
-/* Parallax effect for hero image */
-.mdx-hero__image {
-  will-change: transform;
-  transition: transform 0.1s ease-out;
-}
-
-/* Ensure header stays visible with static positioning */
-.md-header {
-  position: sticky;
-  top: 0;
-  z-index: 4;
 }
 
 /* Override any content padding for landing page */
