@@ -1,0 +1,1 @@
+{"config":{"lang":["en"],"separator":"[\\s\\-]+","pipeline":["stopWordFilter"]},"docs":[{"location":"","title":"Hello, World!","text":"<p>Welcome to my personal landing page!</p> <p>This is the beginning of my personal branding initiative.</p>"}]}
